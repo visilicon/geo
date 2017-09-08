@@ -15,9 +15,9 @@ void radius_caculate(double lat, double lng, double radius){
     GeoHashNeighbors neighbors = ghr.neighbors;
     printf("  geonearby:\n");
     printf("   north_west:%X   north:%X,  north_east:%X\n", neighbors.north_west.bits, neighbors.north.bits, neighbors.north_east.bits);
-    printf("                       \\         |             / \n");
+    printf("\n");
     printf("         west:%X  center:%X,        east:%X\n", neighbors.west.bits, hash.bits, neighbors.east.bits);
-    printf("                       /         |             \\ \n");
+    printf("\n");
     printf("  north_south:%X   south:%X,  south_east:%X\n", neighbors.south_west.bits, neighbors.south.bits, neighbors.south_east.bits);
 
     printf("\n");
@@ -38,6 +38,8 @@ int main(int argc, char *argv[]) {
     double lat = 39.310670;
     double lng = 116.247670;
     radius_caculate(lat, lng, 500);
+    radius_caculate(lat, lng, 1000);
+    radius_caculate(lat, lng, 5000);
 
     return 0;
 }
