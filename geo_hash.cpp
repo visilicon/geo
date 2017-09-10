@@ -14,11 +14,11 @@ void radius_caculate(double lat, double lng, double radius){
     printf("  geoarea:lat-min:%f, lat-max:%f, lng-min:%f, lng-max:%f\n",area.latitude.min, area.latitude.max, area.longitude.min, area.longitude.max);
     GeoHashNeighbors neighbors = ghr.neighbors;
     printf("  geonearby:\n");
-    printf("   north_west:%X   north:%X,  north_east:%X\n", neighbors.north_west.bits, neighbors.north.bits, neighbors.north_east.bits);
+    printf("   north_west:%08X   north:%08X,  north_east:%08X\n", neighbors.north_west.bits, neighbors.north.bits, neighbors.north_east.bits);
     printf("\n");
-    printf("         west:%X  center:%X,        east:%X\n", neighbors.west.bits, hash.bits, neighbors.east.bits);
+    printf("         west:%08X  center:%08X,        east:%08X\n", neighbors.west.bits, hash.bits, neighbors.east.bits);
     printf("\n");
-    printf("  north_south:%X   south:%X,  south_east:%X\n", neighbors.south_west.bits, neighbors.south.bits, neighbors.south_east.bits);
+    printf("  north_south:%08X   south:%08X,  south_east:%08X\n", neighbors.south_west.bits, neighbors.south.bits, neighbors.south_east.bits);
 
     printf("\n");
 }

@@ -1,5 +1,5 @@
 
-all: geo_hash
+all: clean geo_hash
 
 
 geo_hash:
