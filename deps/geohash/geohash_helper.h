@@ -52,6 +52,7 @@ typedef struct {
     GeoHashNeighbors neighbors;
 } GeoHashRadius;
 
+double distanceEarth(double lat1d, double lon1d, double lat2d, double lon2d);
 int GeoHashBitsComparator(const GeoHashBits *a, const GeoHashBits *b);
 uint8_t geohashEstimateStepsByRadius(double range_meters);
 bool geohashBoundingBox(double latitude, double longitude, double radius_meters,
